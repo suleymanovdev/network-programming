@@ -1,0 +1,7 @@
+                 System.Net.Mail space
+_____________________________________________________________
+       Class      |           Description
+_____________________________________________________________
+1 | MailMessage   | Electronic mail message
+2 | SmtpClient    | Realizes sending MailMessage through SMTP
+3 | MailAttacment | Attachment within a mail message
