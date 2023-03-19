@@ -1,7 +1,68 @@
-                 System.Net.Mail space
-_____________________________________________________________
+Name: Mail |
+___________|
+
+                    System.Net.Mail space
+_______________________________________________________________
        Class      |           Description
-_____________________________________________________________
-1 | MailMessage   | Electronic mail message
-2 | SmtpClient    | Realizes sending MailMessage through SMTP
-3 | MailAttacment | Attachment within a mail message
+_______________________________________________________________
+1   MailMessage   | Electronic mail message
+2   SmtpClient    | Realizes sending MailMessage through SMTP
+3   MailAttacment | Attachment within a mail message
+
+              Some member of MailMessage class
+________________________________________________________________
+No. | Property Description
+1     Attachments - Attachment collection
+2     Bcc - List for sending the copies in the form of 
+      a mail addresses string divided by _;_ (Blind Carbon Copy)
+3     Body - Message body
+4     BodyFormat - Electronic mail format MailFormat.Text
+      or MailFormat.Html
+5     Cc - List for sending the copies in the form of a mail
+      addresses string divided by _;_ (Carbon Copy)
+6     From - Sender’s mail address
+7     Subject - Message subject
+8     To - Recipient mail address
+9     Priority - Message priority (MailPriority enumeration)
+10    UrlContentBase - HTTP-heading Content-Base. Base for all
+      relative Url
+11    UrlContentLocation - HTTP-heading Content-Location
+12    Headers - List of non-standard headings sent together
+      with the message
+     
+                 Creating mail message
+________________________________________________________________
+        MailMessage post=new MailMessage();
+        post.From = "vasily@pupkin.com";
+        post.To= "Lusi@pupkin.com";
+        post.Subject= "Test message";
+        post l.BodyFormat = MailFormat.Text;
+        post.Body = "post message";
+        
+        Creating mail message Attachment Class
+________________________________________________________________
+        MailMessage post=new MailMessage();
+        post.From = "vasily@pupkin.com";
+        post.To= "Lusi@pupkin.com";
+        post.Subject= "Spring Calndar";
+        post l.BodyFormat = MailFormat.Text;
+        post.Body = "1 April";
+        MailAttachment at=new MailAttachment();
+        at.Filename= @"C:\MyHohma.Jpg";
+        post.Attachments.Add(at);
+
+    Main properties and methods of SmtpClient class
+________________________________________________________________
+       Method      |           Purpose
+_______________________________________________________________
+       Send                    Mail sending
+       SendAsync               Non-blocking mail sending
+       SendAsyncCancel         Terminating an mail sending non-blocking
+                               operation
+       Property                Description
+       EnableSsl               Encoding use
+       Host                    String — server address
+       Port                    Integer — port number
+       TimeOut                 Command Send terminating timeout
+       SendCompleted           Terminating an asynchronous mail sending
+                               operation
