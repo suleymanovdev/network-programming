@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
-using MailKit.Search; 
 
 namespace SMTP_MAIL
 {
