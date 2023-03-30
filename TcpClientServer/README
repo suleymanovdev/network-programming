@@ -1,0 +1,6 @@
+Name: TcpClientServer |
+______________________|
+
+Here I have write simple usage of tcp in server listening,
+client can send request ("pkgs") (as message) or "EXIT" command.
+Server check all requests and give response only for commands.
